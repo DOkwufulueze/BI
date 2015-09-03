@@ -1,0 +1,92 @@
+.chart {
+  float: left;
+  width: 50%;
+  height: 250px;
+  border: 1px solid #bababa;
+  clear: none;
+}
+
+.table {
+  float: left;
+  width: 45%;
+  height: 400px;
+  margin-right: 2px;
+  clear: none;
+  overflow: auto;
+  border: 1px solid #bababa;
+}
+
+.wrapper {
+  clear: both;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top {
+  clear: both;
+  width: 100%;
+}
+
+.bottom {
+  clear: both;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.revealed {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.row {
+  border-bottom: 1px solid #bababa;
+  height: 30px;
+}
+
+.row:nth-child(1) {
+  border-top: 1px solid #bababa;
+}
+
+.row-odd {
+  background: #eeeeee;
+}
+
+.row-even {
+  background: #dedede;
+}
+
+.column {
+  width: 120px;
+  height: inherit;
+  border-right: 1px solid #bababa;
+  clear: none;
+  float: left;
+}
+
+.column:nth-child(1) {
+  border-left: 1px solid #bababa;
+}
+
+.xFieldsDiv, .yFieldsDiv, .xFieldsDivDescription, .yFieldsDivDescription {
+  width: 200px;
+  clear: none;
+  float: left;
+  margin-right: 10px;
+}
+
+.fieldsDiv, .fieldsDivDescription {
+  clear: both;
+}
+
+
