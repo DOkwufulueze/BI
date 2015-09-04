@@ -16,7 +16,7 @@ class Chart {
     this._data = this._referencingObject._data;
     const margin = {top: 30, right: 20, bottom: 30, left: 50};
     const width = 600 - margin.left - margin.right;
-    const height = 270 - margin.top - margin.bottom;
+    const height = 470 - margin.top - margin.bottom;
     const x = d3.scale.linear().range([0, width]);
     const y = d3.scale.linear().range([height, 0]);
     this._useChartVariables(x, y, width, height, margin);
@@ -72,8 +72,10 @@ class Chart {
   _getData(x, y, width, height) {
       
     // Scale the range of the data
-    x.domain(d3.extent(this._data, (d) => { return d[this._xField]; }));
-    y.domain([0, d3.max(this._data, (d) => { return d[this._yField]; })]);
+    //x.domain(d3.extent(this._data, (d) => { return d[this._xField]; }));
+    x.domain([0, d3.max(this._data, (d) => { return d[this._xField]; })]);
+    //y.domain([d3.max(this._data, (d) => { return d[this._yField]; }), d3.min(this._data, (d) => { return d[this._yField]; })]);
+    y.domain([0, d3.min(this._data, (d) => { return d[this._yField]; })]);
     this._svg.append("path") // Add the valueline path.
     .attr("class", "line")
     .attr("d", this._valueline(this._data));
