@@ -13,6 +13,7 @@ class BI {
     this._data = {};
     this._$xFieldsDiv = null;
     this._$yFieldsDiv = null;
+    this._cache = null;
     this._init();
   }
 
@@ -42,18 +43,22 @@ class BI {
   _useAppropriateOption(value) {
     if (value) {
       //Todo: send option to Rails server but do the below for now
-      $('div#table').html('');
-      $('div#chart').html('');
-      this._xField = this._$xFieldsDiv.find('input[name="xRadio"]:checked').val() ? this._$xFieldsDiv.find('input[name="xRadio"]:checked').val() : 'COST';
-      this._yField = this._$yFieldsDiv.find('input[name="yRadio"]:checked').val() ? this._$yFieldsDiv.find('input[name="yRadio"]:checked').val() : 'RETURNS';
-      this._fillTable('');
+      this._useValue(value);
     } else {
       $('div#table').html('');
       $('div#chart').html('');
-      this._xField = this._$xFieldsDiv.find('input[name="xRadio"]:checked').val() ? this._$xFieldsDiv.find('input[name="xRadio"]:checked').val() : 'COST';
-      this._yField = this._$yFieldsDiv.find('input[name="yRadio"]:checked').val() ? this._$yFieldsDiv.find('input[name="yRadio"]:checked').val() : 'RETURNS';
+      this._xField = this._$xFieldsDiv.find('input[name="xRadio"]:checked').length ? this._$xFieldsDiv.find('input[name="xRadio"]:checked').next('label').text() : 'COST';
+      this._yField = this._$yFieldsDiv.find('input[name="yRadio"]:checked').length ? this._$yFieldsDiv.find('input[name="yRadio"]:checked').next('label').text() : 'RETURNS';
       this._fillTable('');
     }
+  }
+
+  _useValue(value) {
+    $('div#table').html('');
+    $('div#chart').html('');
+    this._xField = this._$xFieldsDiv.find('input[name="xRadio"]:checked').length ? this._$xFieldsDiv.find('input[name="xRadio"]:checked').next('label').text() : 'COST';
+    this._yField = this._$yFieldsDiv.find('input[name="yRadio"]:checked').length ? this._$yFieldsDiv.find('input[name="yRadio"]:checked').next('label').text() : 'RETURNS';
+    this._fillTable('');
   }
 
   _fillTable(method) {
@@ -70,6 +75,7 @@ class BI {
           this._loopThroughReturnedObject(returnedObject);
           this._resetRadioButtons();
           this._Chart._setUpChartSpace();
+          this._cache = true;
         }
       }
     });

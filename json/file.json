@@ -1,8 +1,8 @@
 [
-  {"YEAR":"2015", "MONTH":"January", "ORDERS":"21", "DELIVERED":"15", "COST":"2000", "RETURNS":"2500"},
-  {"YEAR":"2015", "MONTH":"February", "ORDERS":"59", "DELIVERED":"59", "COST":"4500", "RETURNS":"10500"},
-  {"YEAR":"2015", "MONTH":"March", "ORDERS":"28", "DELIVERED":"20", "COST":"2550", "RETURNS":"3000"},
-  {"YEAR":"2015", "MONTH":"April", "ORDERS":"20", "DELIVERED":"17", "COST":"1980", "RETURNS":"2315"},
-  {"YEAR":"2015", "MONTH":"May", "ORDERS":"43", "DELIVERED":"42", "COST":"3700", "RETURNS":"3800"},
-  {"YEAR":"2015", "MONTH":"June", "ORDERS":"61", "DELIVERED":"61", "COST":"6200", "RETURNS":"12300"}
+  {"YEAR":"2015", "MONTH":"January", "ORDERS":"21", "DELIVERED":"15", "COST":"150", "RETURNS":"200"},
+  {"YEAR":"2015", "MONTH":"February", "ORDERS":"59", "DELIVERED":"59", "COST":"400", "RETURNS":"500"},
+  {"YEAR":"2015", "MONTH":"March", "ORDERS":"28", "DELIVERED":"20", "COST":"250", "RETURNS":"300"},
+  {"YEAR":"2015", "MONTH":"April", "ORDERS":"20", "DELIVERED":"17", "COST":"380", "RETURNS":"315"},
+  {"YEAR":"2015", "MONTH":"May", "ORDERS":"43", "DELIVERED":"42", "COST":"300", "RETURNS":"800"},
+  {"YEAR":"2015", "MONTH":"June", "ORDERS":"61", "DELIVERED":"61", "COST":"200", "RETURNS":"300"}
 ]
